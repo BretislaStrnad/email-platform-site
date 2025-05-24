@@ -62,7 +62,81 @@
       <button onclick="recommend()">Zobrazit doporučení</button>
       <div class="result" id="result"></div>
     </section>
-  </main>
+  
+    <section>
+      <h2>Srovnání platforem</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Platforma</th>
+            <th>Vlastní SMTP</th>
+            <th>Analytika/BI</th>
+            <th>Multikanál</th>
+            <th>Škálovatelnost</th>
+            <th>Automatizace</th>
+            <th>UX/UI</th>
+            <th>Napojení na CRM</th>
+            <th>Ekologický provoz</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Boldem</strong></td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+          <tr><td><strong>Targito</strong></td><td>✖</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>⚠️</td></tr>
+          <tr><td><strong>Mailkit</strong></td><td>✔</td><td>⚠️</td><td>✖</td><td>✔</td><td>✔</td><td>⚠️</td><td>✖</td><td>✖</td></tr>
+          <tr><td><strong>SmartEmailing</strong></td><td>✔</td><td>✖</td><td>✖</td><td>⚠️</td><td>✔</td><td>✔</td><td>⚠️</td><td>✖</td></tr>
+          <tr><td><strong>Ecomail</strong></td><td>✖</td><td>✖</td><td>✖</td><td>✖</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <section>
+      <h2>Detailní srovnání platforem podle 27+ kritérií</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Kritérium</th>
+            <th>Boldem</th>
+            <th>Targito</th>
+            <th>Mailkit</th>
+            <th>SmartEmailing</th>
+            <th>Ecomail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Vlastní SMTP infrastruktura</td><td>✔</td><td>✖</td><td>✔</td><td>✔</td><td>✖</td></tr>
+          <tr><td>CDP-first architektura</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
+          <tr><td>Pokročilá segmentace (RFM, CLV)</td><td>✔</td><td>✔</td><td>✖</td><td>⚠️</td><td>✖</td></tr>
+          <tr><td>Automatizace scénářů</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+          <tr><td>Multikanálová komunikace (e-mail, SMS, push)</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
+          <tr><td>Analýza kampaní (PNO, ROI, heatmapy)</td><td>✔</td><td>✔</td><td>⚠️</td><td>✖</td><td>✖</td></tr>
+          <tr><td>Napojení na Google BigQuery</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
+          <tr><td>Podpora Looker Studio</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
+          <tr><td>Publika pro reklamy (Meta, Sklik, Ads)</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
+          <tr><td>Napojení na CRM systémy</td><td>✔</td><td>✔</td><td>✖</td><td>⚠️</td><td>✖</td></tr>
+          <tr><td>Produktové katalogy a feedy</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
+          <tr><td>API dokumentace a přístup</td><td>✔</td><td>✔</td><td>✔</td><td>⚠️</td><td>⚠️</td></tr>
+          <tr><td>In-app messaging</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td><td>✖</td></tr>
+          <tr><td>Personalizace obsahu</td><td>✔</td><td>✔</td><td>⚠️</td><td>✔</td><td>✔</td></tr>
+          <tr><td>AI segmentace a predikce</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
+          <tr><td>Podpora jazyků (CZ/EN)</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+          <tr><td>UX/UI kvalita</td><td>✔</td><td>✔</td><td>⚠️</td><td>✔</td><td>✔</td></tr>
+          <tr><td>SLA a zákaznická podpora</td><td>✔</td><td>✔</td><td>✔</td><td>⚠️</td><td>⚠️</td></tr>
+          <tr><td>Dostupnost 99.9 %+</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✖</td></tr>
+          <tr><td>White-label režim</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td><td>✖</td></tr>
+          <tr><td>Responzivní šablony</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+          <tr><td>Editor drag&drop</td><td>✔</td><td>✔</td><td>⚠️</td><td>✔</td><td>✔</td></tr>
+          <tr><td>Webhooky</td><td>✔</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td></tr>
+          <tr><td>Monitoring a alerting</td><td>✔</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td></tr>
+          <tr><td>Ekologická infrastruktura (OZE/DC)</td><td>✔</td><td>⚠️</td><td>✖</td><td>✖</td><td>✖</td></tr>
+          <tr><td>Hosting v ČR/EU</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+          <tr><td>Možnost exportu dat</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+        </tbody>
+      </table>
+      <p><small>✔ = podporováno, ✖ = nepodporováno, ⚠️ = omezeně / závisí na nastavení</small></p>
+    </section>
+
+</main>
   <footer>
     &copy; 2025 Webkomplet | <a href="about.html">O projektu</a>
   </footer>
