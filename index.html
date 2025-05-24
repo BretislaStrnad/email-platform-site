@@ -1,5 +1,94 @@
+
 <!DOCTYPE html>
-<!-- (zkrácený obsah, vložím kompletní níže pokud bude potřeba) -->
 <html lang="cs">
-<!-- index.html obsah by byl zde -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srovnání e-mailingových platforem</title>
+  <meta name="description" content="Srovnání českých e-mailingových platforem na základě 27 kritérií.">
+  <meta name="keywords" content="email marketing, srovnání, platformy, Boldem, Targito, Mailkit, SmartEmailing, Ecomail">
+  <meta name="author" content="Webkomplet s.r.o.">
+  <link rel="icon" href="https://boldem.cz/favicon.ico" />
+  <style>
+    body { font-family: "Segoe UI", Arial, sans-serif; background: #f7faff; margin: 0; color: #333; }
+    header { background: #005eb8; color: white; padding: 2rem 1rem; text-align: center; }
+    main { max-width: 960px; margin: auto; padding: 2rem 1rem; }
+    section { background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+    h2 { color: #005eb8; }
+    label { font-weight: bold; margin-top: 1rem; display: block; }
+    select, button { width: 100%; padding: 0.5rem; font-size: 1rem; margin-bottom: 1rem; }
+    .result { padding: 1rem; font-size: 1.1rem; font-weight: bold; color: #005eb8; background: #e8f1fc; border-left: 5px solid #005eb8; margin-top: 1rem; }
+    footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #666; }
+    small { color: #666; font-size: 0.9em; display: block; margin-top: -0.5rem; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Srovnání a doporučení e-mailingových platforem</h1>
+    <p>Powered by <strong>Boldem</strong></p>
+  </header>
+  <main>
+    <section>
+      <h2>Dotazník</h2>
+      <label for="channels">Kolik komunikačních kanálů kromě e-mailu plánujete používat?</label>
+      <small>Např. SMS, push notifikace, in-app zprávy.</small>
+      <select id="channels">
+        <option value="low">Pouze e-mail</option>
+        <option value="medium">2–3 kanály</option>
+        <option value="high">Více než 3 kanály</option>
+      </select>
+
+      <label for="analytics">Potřebujete pokročilé statistiky a datovou analytiku?</label>
+      <small>Např. sledování chování zákazníků, RFM analýzy, BI napojení.</small>
+      <select id="analytics">
+        <option value="no">Ne</option>
+        <option value="yes">Ano</option>
+      </select>
+
+      <label for="infrastructure">Chcete mít vlastní infrastrukturní doručování (vlastní IP)?</label>
+      <small>Zvýšení reputace a doručitelnosti, vhodné pro e-commerce a velké rozesílky.</small>
+      <select id="infrastructure">
+        <option value="no">Ne</option>
+        <option value="yes">Ano</option>
+      </select>
+
+      <label for="size">Jak velká je vaše firma?</label>
+      <select id="size">
+        <option value="small">Malá</option>
+        <option value="medium">Střední</option>
+        <option value="large">Velká</option>
+      </select>
+
+      <button onclick="recommend()">Zobrazit doporučení</button>
+      <div class="result" id="result"></div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Webkomplet | <a href="about.html">O projektu</a>
+  </footer>
+
+  <script>
+    function recommend() {
+      const ch = document.getElementById("channels").value;
+      const an = document.getElementById("analytics").value;
+      const ip = document.getElementById("infrastructure").value;
+      const sz = document.getElementById("size").value;
+
+      let result = '';
+      if (an === 'yes' && ip === 'yes' && (ch !== 'low' || sz === 'large')) {
+        result = "Doporučujeme: <strong>Boldem</strong> – nejkomplexnější volba pro růstové a datové řízení marketingu.";
+      } else if (an === 'yes' && ip === 'no') {
+        result = "Doporučujeme: <strong>Targito</strong> – výborné pro enterprise a BI týmy, bez vlastní infrastruktury.";
+      } else if (ip === 'yes') {
+        result = "Doporučujeme: <strong>Mailkit</strong> – vhodné pro robustní doručování, méně pro personalizaci.";
+      } else if (sz === 'small') {
+        result = "Doporučujeme: <strong>Ecomail</strong> – jednoduché řešení pro začátek.";
+      } else {
+        result = "Doporučujeme: <strong>SmartEmailing</strong> – tradiční volba pro základní newsletterovou komunikaci.";
+      }
+
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+</body>
 </html>
