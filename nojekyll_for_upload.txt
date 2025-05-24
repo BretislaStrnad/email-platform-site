@@ -1,0 +1,1 @@
+Tento soubor přejmenujte po nahrání na GitHubu na .nojekyll (bez přípony)
