@@ -2,167 +2,166 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Srovnání e-mailingových platforem</title>
-  <meta name="description" content="Srovnání českých e-mailingových platforem na základě 27 kritérií.">
-  <meta name="keywords" content="email marketing, srovnání, platformy, Boldem, Targito, Mailkit, SmartEmailing, Ecomail">
-  <meta name="author" content="Webkomplet s.r.o.">
-  <link rel="icon" href="https://boldem.cz/favicon.ico" />
-  <style>
-    body { font-family: "Segoe UI", Arial, sans-serif; background: #f7faff; margin: 0; color: #333; }
-    header { background: #005eb8; color: white; padding: 2rem 1rem; text-align: center; }
-    main { max-width: 960px; margin: auto; padding: 2rem 1rem; }
-    section { background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
-    h2 { color: #005eb8; }
-    label { font-weight: bold; margin-top: 1rem; display: block; }
-    select, button { width: 100%; padding: 0.5rem; font-size: 1rem; margin-bottom: 1rem; }
-    .result { padding: 1rem; font-size: 1.1rem; font-weight: bold; color: #005eb8; background: #e8f1fc; border-left: 5px solid #005eb8; margin-top: 1rem; }
-    footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #666; }
-    small { color: #666; font-size: 0.9em; display: block; margin-top: -0.5rem; margin-bottom: 1rem; }
-  </style>
+<meta charset="utf-8">
+<title>Glosář &amp; recenze e‑mailingových platforem | OKAY benchmark</title>
+<meta name="description" content="Detailní glosář pojmů a recenze pěti nejpoužívanějších e‑mailingových platforem v ČR – Boldem, Targito, SmartEmailing, Ecomail, Mailkit (květen 2025).">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+/* fallback style in případě, že hlavní CSS neexistuje */
+body{font-family:Arial,Helvetica,sans-serif;margin:40px;line-height:1.6;color:#333;}
+h1,h2,h3{color:#222;}
+table{border-collapse:collapse;width:100%;margin-bottom:30px;}
+table,th,td{border:1px solid #bbb;}
+th,td{padding:8px;}
+th{background:#f7f7f7;text-align:left;}
+a{color:#0066cc;text-decoration:none;}
+a:hover{text-decoration:underline;}
+.toc ul{margin:0 0 1em 0;padding-left:20px;}
+.toc li{margin:4px 0;}
+small{font-size:60%;}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Srovnání a doporučení e-mailingových platforem</h1>
-    <p>Powered by <strong>Boldem</strong></p>
-  </header>
-  <main>
-    <section>
-      <h2>Dotazník</h2>
-      <label for="channels">Kolik komunikačních kanálů kromě e-mailu plánujete používat?</label>
-      <small>Např. SMS, push notifikace, in-app zprávy.</small>
-      <select id="channels">
-        <option value="low">Pouze e-mail</option>
-        <option value="medium">2–3 kanály</option>
-        <option value="high">Více než 3 kanály</option>
-      </select>
 
-      <label for="analytics">Potřebujete pokročilé statistiky a datovou analytiku?</label>
-      <small>Např. sledování chování zákazníků, RFM analýzy, BI napojení.</small>
-      <select id="analytics">
-        <option value="no">Ne</option>
-        <option value="yes">Ano</option>
-      </select>
+<nav><a href="../">← Zpět na hlavní srovnání</a></nav>
 
-      <label for="infrastructure">Chcete mít vlastní infrastrukturní doručování (vlastní IP)?</label>
-      <small>Zvýšení reputace a doručitelnosti, vhodné pro e-commerce a velké rozesílky.</small>
-      <select id="infrastructure">
-        <option value="no">Ne</option>
-        <option value="yes">Ano</option>
-      </select>
+<h1>Glosář &amp; kompletní recenze platforem <small>(květen 2025)</small></h1>
 
-      <label for="size">Jak velká je vaše firma?</label>
-      <select id="size">
-        <option value="small">Malá</option>
-        <option value="medium">Střední</option>
-        <option value="large">Velká</option>
-      </select>
+<p>Tato stránka rozšiřuje hlavní benchmark o vysvětlivky pojmů a detailní recenze všech pěti posuzovaných e‑mailingových platforem.</p>
 
-      <button onclick="recommend()">Zobrazit doporučení</button>
-      <div class="result" id="result"></div>
-    </section>
-  
-    <section>
-      <h2>Srovnání platforem</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Platforma</th>
-            <th>Vlastní SMTP</th>
-            <th>Analytika/BI</th>
-            <th>Multikanál</th>
-            <th>Škálovatelnost</th>
-            <th>Automatizace</th>
-            <th>UX/UI</th>
-            <th>Napojení na CRM</th>
-            <th>Ekologický provoz</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Boldem</strong></td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
-          <tr><td><strong>Targito</strong></td><td>✖</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>⚠️</td></tr>
-          <tr><td><strong>Mailkit</strong></td><td>✔</td><td>⚠️</td><td>✖</td><td>✔</td><td>✔</td><td>⚠️</td><td>✖</td><td>✖</td></tr>
-          <tr><td><strong>SmartEmailing</strong></td><td>✔</td><td>✖</td><td>✖</td><td>⚠️</td><td>✔</td><td>✔</td><td>⚠️</td><td>✖</td></tr>
-          <tr><td><strong>Ecomail</strong></td><td>✖</td><td>✖</td><td>✖</td><td>✖</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td></tr>
-        </tbody>
-      </table>
-    </section>
+<div class="toc">
+<h2>Obsah</h2>
+<ul>
+  <li><a href="#glosar">Slovník pojmů</a></li>
+  <li><a href="#recenze">Recenze platforem</a>
+    <ul>
+      <li><a href="#boldem">Boldem</a></li>
+      <li><a href="#targito">Targito</a></li>
+      <li><a href="#smartemailing">SmartEmailing</a></li>
+      <li><a href="#ecomail">Ecomail</a></li>
+      <li><a href="#mailkit">Mailkit</a></li>
+    </ul>
+  </li>
+  <li><a href="#pozn">Poznámky a zdroje</a></li>
+</ul>
+</div>
 
+<!-- Glossary -->
+<h2 id="glosar">Slovník pojmů</h2>
+<table>
+  <tr>
+    <th>Termín v tabulce</th>
+    <th>Co znamená</th>
+    <th>Proč je důležitý</th>
+  </tr>
+  <tr>
+    <td>TCO &amp; pricing transparency</td>
+    <td>Total Cost of Ownership – celkové náklady (licence, kredity, implementace, provoz, skryté poplatky).</td>
+    <td>Rozhoduje o reálné návratnosti investice a eliminuje „nákladová překvapení“.</td>
+  </tr>
+  <tr>
+    <td>Security &amp; compliance maturity</td>
+    <td>Úroveň zabezpečení (šifrování, 2FA, SOC 2, ISO 27001/9001) a shoda s GDPR / ePrivacy.</td>
+    <td>Ovlivňuje reputační i právní riziko při práci s osobními daty.</td>
+  </tr>
+  <tr>
+    <td>Road‑mapa dodavatele (12–24 m)</td>
+    <td>Přehled plánovaných funkcí a rychlost jejich doručování (release cadence).</td>
+    <td>Chrání investici proti zastarávání platformy.</td>
+  </tr>
+  <tr>
+    <td>AI &amp; predictive features</td>
+    <td>Generování obsahu, predikce CLV, send‑time, churn či produktových doporučení.</td>
+    <td>Zvyšuje relevanci kampaní a šetří čas týmu.</td>
+  </tr>
+  <tr>
+    <td>Ecosystem &amp; integrace</td>
+    <td>Hotové konektory, API, Webhooky, CDP bridge, pluginy (Shopify, Shoptet …).</td>
+    <td>Zkracuje čas integrace a minimalizuje technický dluh.</td>
+  </tr>
+  <tr>
+    <td>User adoption &amp; enablement</td>
+    <td>Školení, e‑learning, certifikace, Customer Success Management.</td>
+    <td>Zrychluje time‑to‑value a snižuje náklady na interní podporu.</td>
+  </tr>
+  <tr>
+    <td>Sustainability impact</td>
+    <td>Uhlíková stopa, zdroje energie datacenter, veřejné ESG reporty.</td>
+    <td>Podporuje plnění firemních ESG/CSR cílů.</td>
+  </tr>
+</table>
 
-    <section>
-      <h2>Detailní srovnání platforem podle 27+ kritérií</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Kritérium</th>
-            <th>Boldem</th>
-            <th>Targito</th>
-            <th>Mailkit</th>
-            <th>SmartEmailing</th>
-            <th>Ecomail</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Vlastní SMTP infrastruktura</td><td>✔</td><td>✖</td><td>✔</td><td>✔</td><td>✖</td></tr>
-          <tr><td>CDP-first architektura</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
-          <tr><td>Pokročilá segmentace (RFM, CLV)</td><td>✔</td><td>✔</td><td>✖</td><td>⚠️</td><td>✖</td></tr>
-          <tr><td>Automatizace scénářů</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
-          <tr><td>Multikanálová komunikace (e-mail, SMS, push)</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
-          <tr><td>Analýza kampaní (PNO, ROI, heatmapy)</td><td>✔</td><td>✔</td><td>⚠️</td><td>✖</td><td>✖</td></tr>
-          <tr><td>Napojení na Google BigQuery</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
-          <tr><td>Podpora Looker Studio</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
-          <tr><td>Publika pro reklamy (Meta, Sklik, Ads)</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
-          <tr><td>Napojení na CRM systémy</td><td>✔</td><td>✔</td><td>✖</td><td>⚠️</td><td>✖</td></tr>
-          <tr><td>Produktové katalogy a feedy</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
-          <tr><td>API dokumentace a přístup</td><td>✔</td><td>✔</td><td>✔</td><td>⚠️</td><td>⚠️</td></tr>
-          <tr><td>In-app messaging</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td><td>✖</td></tr>
-          <tr><td>Personalizace obsahu</td><td>✔</td><td>✔</td><td>⚠️</td><td>✔</td><td>✔</td></tr>
-          <tr><td>AI segmentace a predikce</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td></tr>
-          <tr><td>Podpora jazyků (CZ/EN)</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
-          <tr><td>UX/UI kvalita</td><td>✔</td><td>✔</td><td>⚠️</td><td>✔</td><td>✔</td></tr>
-          <tr><td>SLA a zákaznická podpora</td><td>✔</td><td>✔</td><td>✔</td><td>⚠️</td><td>⚠️</td></tr>
-          <tr><td>Dostupnost 99.9 %+</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✖</td></tr>
-          <tr><td>White-label režim</td><td>✔</td><td>✖</td><td>✖</td><td>✖</td><td>✖</td></tr>
-          <tr><td>Responzivní šablony</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
-          <tr><td>Editor drag&drop</td><td>✔</td><td>✔</td><td>⚠️</td><td>✔</td><td>✔</td></tr>
-          <tr><td>Webhooky</td><td>✔</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td></tr>
-          <tr><td>Monitoring a alerting</td><td>✔</td><td>✔</td><td>✔</td><td>✖</td><td>✖</td></tr>
-          <tr><td>Ekologická infrastruktura (OZE/DC)</td><td>✔</td><td>⚠️</td><td>✖</td><td>✖</td><td>✖</td></tr>
-          <tr><td>Hosting v ČR/EU</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
-          <tr><td>Možnost exportu dat</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
-        </tbody>
-      </table>
-      <p><small>✔ = podporováno, ✖ = nepodporováno, ⚠️ = omezeně / závisí na nastavení</small></p>
-    </section>
+<!-- Reviews -->
+<h2 id="recenze">Recenze platforem</h2>
 
-</main>
-  <footer>
-    &copy; 2025 Webkomplet | <a href="about.html">O projektu</a>
-  </footer>
+<h3 id="boldem">Boldem</h3>
+<table>
+  <tr><th>Oblast</th><th>Shrnutí</th></tr>
+  <tr><td>Pozicionování</td><td>Česká CDP‑first platforma spojující e‑mail, SMS, push a web‑personalizaci do jediného 360° profilu zákazníka.</td></tr>
+  <tr><td>AI &amp; predikce</td><td>Integrovaný ChatGPT modul + prediktivní CLV a send‑time beta.</td></tr>
+  <tr><td>Integrace</td><td>Pluginy pro Shoptet, Shopify, Upgates, BigQuery, REST API &amp; Webhooky.</td></tr>
+  <tr><td>Bezpečnost</td><td>GDPR‑ready, ISO 27001 v auditu; vlastní SMTP infrastruktura.</td></tr>
+  <tr><td>Cenový model</td><td>Freemium (do 500 kontaktů), poté objemová licence.</td></tr>
+  <tr><td>Silné stránky</td><td>Datová hloubka, rychlé releasy, AI roadmapa.</td></tr>
+  <tr><td>Limity</td><td>ISO certifikace v procesu, TCO citlivé na objem SMS.</td></tr>
+  <tr><td>Pro koho</td><td>Retail/e‑commerce s BI a potřebou CDP.</td></tr>
+</table>
 
-  <script>
-    function recommend() {
-      const ch = document.getElementById("channels").value;
-      const an = document.getElementById("analytics").value;
-      const ip = document.getElementById("infrastructure").value;
-      const sz = document.getElementById("size").value;
+<h3 id="targito">Targito</h3>
+<table>
+  <tr><th>Oblast</th><th>Shrnutí</th></tr>
+  <tr><td>Pozicionování</td><td>CDP + automation se silnou personalizací napříč e‑mail/SMS/web/social.</td></tr>
+  <tr><td>Reporting</td><td>Real‑time ROI dashboard.</td></tr>
+  <tr><td>Cenový model</td><td>Licenční paušál od 10 900 Kč/měs.</td></tr>
+  <tr><td>Bezpečnost</td><td>Privátní cloud, GDPR, SLA; ISO 27001 plán Q3 2025.</td></tr>
+  <tr><td>Silné stránky</td><td>HL&nbsp;personalizace, bohaté BI.</td></tr>
+  <tr><td>Limity</td><td>Vyšší cena, menší self‑service.</td></tr>
+  <tr><td>Pro koho</td><td>Střední a větší e‑shopy s datovými modely.</td></tr>
+</table>
 
-      let result = '';
-      if (an === 'yes' && ip === 'yes' && (ch !== 'low' || sz === 'large')) {
-        result = "Doporučujeme: <strong>Boldem</strong> – nejkomplexnější volba pro růstové a datové řízení marketingu.";
-      } else if (an === 'yes' && ip === 'no') {
-        result = "Doporučujeme: <strong>Targito</strong> – výborné pro enterprise a BI týmy, bez vlastní infrastruktury.";
-      } else if (ip === 'yes') {
-        result = "Doporučujeme: <strong>Mailkit</strong> – vhodné pro robustní doručování, méně pro personalizaci.";
-      } else if (sz === 'small') {
-        result = "Doporučujeme: <strong>Ecomail</strong> – jednoduché řešení pro začátek.";
-      } else {
-        result = "Doporučujeme: <strong>SmartEmailing</strong> – tradiční volba pro základní newsletterovou komunikaci.";
-      }
+<h3 id="smartemailing">SmartEmailing</h3>
+<table>
+  <tr><th>Oblast</th><th>Shrnutí</th></tr>
+  <tr><td>Pozicionování</td><td>Mainstream český e‑mailing s důrazem na jednoduchost.</td></tr>
+  <tr><td>Funkce</td><td>Drag‑&amp;-drop editor, scénáře, multikanál, RFM modul.</td></tr>
+  <tr><td>Bezpečnost</td><td>Vlastní servery v ČR, GDPR; bez ISO/SOC.</td></tr>
+  <tr><td>Cenový model</td><td>Do 1 000 kontaktů zdarma, nad 50 000 individuální.</td></tr>
+  <tr><td>Silné stránky</td><td>Akademie, česká podpora, doručitelnost.</td></tr>
+  <tr><td>Limity</td><td>Omezené API a AI.</td></tr>
+  <tr><td>Pro koho</td><td>SMB, neziskovky, začátečníci.</td></tr>
+</table>
 
-      document.getElementById("result").innerHTML = result;
-    }
-  </script>
+<h3 id="ecomail">Ecomail</h3>
+<table>
+  <tr><th>Oblast</th><th>Shrnutí</th></tr>
+  <tr><td>Pozicionování</td><td>Omnichannel platforma (e‑mail, SMS, FB/IG kampaně).</td></tr>
+  <tr><td>AI</td><td>ChatGPT asistované předměty a copy‑enhancer.</td></tr>
+  <tr><td>Funkce</td><td>150+ šablon, automatizace, 99,97 % doručitelnost.</td></tr>
+  <tr><td>Bezpečnost</td><td>GDPR, hosting s ISO.</td></tr>
+  <tr><td>Cenový model</td><td>Standard tarif od 730 Kč/měs. (50 000 e‑mailů).</td></tr>
+  <tr><td>Silné stránky</td><td>UX, šablony, cena/výkon.</td></tr>
+  <tr><td>Limity</td><td>Chybí pokročilé data feeds, predikce.</td></tr>
+  <tr><td>Pro koho</td><td>Menší a střední e‑shopy.</td></tr>
+</table>
+
+<h3 id="mailkit">Mailkit</h3>
+<table>
+  <tr><th>Oblast</th><th>Shrnutí</th></tr>
+  <tr><td>Pozicionování</td><td>Infrastrukturní deliverability‑first platforma.</td></tr>
+  <tr><td>Bezpečnost &amp; certifikace</td><td>ISO 27001, ISO 9001, člen MAAWG &amp; CSA.</td></tr>
+  <tr><td>Funkce</td><td>Dedikované IP, BIMI inspector, vetting odesílatelů.</td></tr>
+  <tr><td>Cenový model</td><td>CPM; často SMTP back‑up pro agentury.</td></tr>
+  <tr><td>Silné stránky</td><td>Doručitelnost, bezpečnost.</td></tr>
+  <tr><td>Limity</td><td>Chybí vizuální editor, marketingový layer.</td></tr>
+  <tr><td>Pro koho</td><td>Velcí odesílatelé transakčních e‑mailů, agentury.</td></tr>
+</table>
+
+<h2 id="pozn">Poznámky &amp; zdroje</h2>
+<p>Informace jsou platné k 24. 5. 2025, sestavené z veřejných zdrojů, demo účtů a rozhovorů. Před finálním výběrem doporučujeme údaje ověřit bezpečnostním dotazníkem, cenovou simulací a ESG reporty dodavatelů.</p>
+
+<footer>
+<p><a href="../">↑ Zpět nahoru</a></p>
+</footer>
+
 </body>
 </html>
